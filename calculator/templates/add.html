@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title%}Add{% endblock%}
+{% block content%}
+    <form method="POST" action="" class="add">
+    {{form.hidden_tag()}}
+        <div class="mb-3"class="form-control form-control-lg">
+            <h3>{{form.number1.label}}</h3><br>
+            {{form.number1}}
+        </div>
+        <div class="mb-3"class="form-control form-control-lg" >
+            <h3>{{form.number2.label}}</h3><br>
+            {{form.number2}}
+        </div>
+        <div style="margin-top:5px">
+            {{form.submit}}
+        </div>
+    </form>
+    <div class="add-item">
+        <h2>The total is: <b style="color:blue">{{add}}</b></h2>
+    </div>
+{% endblock%}

@@ -1,0 +1,41 @@
+.home{
+    align-items: center;
+    width: 50rem;
+    height:20rem;
+    background-color:rgb(243, 235, 235);
+    color: rgb(255, 255, 255);
+    margin: 32px auto 0 auto;
+    border-radius: 10%;
+}
+.home-item{
+    display: block;
+    text-align: center;
+    margin:0% auto;
+    padding:2em;
+
+}
+
+a{
+    text-decoration: none;
+    color:aliceblue;
+    font-family: sans-serif;
+    font-size: large;
+}
+a:hover{
+    background-color: aqua;
+}
+.add,.multiply,.subtract,.divide,.register{
+    align-items: center;
+    width: 50rem;
+    height:20rem;
+    margin: 32px auto 0 auto;
+    padding:20px;
+    background-color:pink;
+}
+.multi-item,.add-item,.div-item,.sub-item{
+    text-align:center;
+    margin:32px auto 0 auto;
+    background-color:aqua;
+    width: 50rem;
+
+}

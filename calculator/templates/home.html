@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title%}Homepage{% endblock%}
+{% block content%}
+    <div class="home" style="color:white">
+        <div class="home-item" style="background-color:blue">
+            <a href="{{url_for('math.add')}}">Addition</a>
+        </div>
+        <div class="home-item" style="background-color:red">
+            <a href="{{url_for('math.subtract')}}">Subtraction</a>
+        </div>
+        <div class="home-item" style="background-color:orange">
+            <a href="{{url_for('math.divide')}}">Division</a>
+        </div>
+        <div class="home-item" style="background-color:pink">
+            <a href="{{url_for('math.multiply')}}">Multiplication</a>
+        </div>
+    </div>
+{% endblock%}
