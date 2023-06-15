@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title%}Register{% endblock%}
+{% block content%}
+    <form method="POST" action="" class="register">
+    {{form.hidden_tag()}}
+        <div class="mb-3" class="form-control form-control-lg">
+            {{form.username.label}}<br>
+            {{form.username}}
+        </div>
+        <div class="mb-3" class="form-control form-control-lg">
+            {{form.email.label}}<br>
+            {{form.email}}
+        </div>
+        <div class="mb-3" class="form-control form-control-lg">
+            {{form.password.label}}<br>
+            {{form.password}}
+        </div>
+        <div class="mb-3" class="form-control form-control-lg">
+            {{form.password1.label}}<br>
+            {{form.password1}}
+        </div>
+        <div style="margin-top:5px">
+            {{form.submit}}
+        </div>
+    </form>
+{% endblock%}
