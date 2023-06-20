@@ -10,7 +10,7 @@ class users(db.Model,UserMixin):
     id=db.Column(db.Integer,primary_key=True)
     username=db.Column(db.String,nullable=False,unique=True)
     email=db.Column(db.String,nullable=False,unique=True)
-    password_hash=db.Column(db.String(12))
+    password_hash=db.Column(db.String(60))
     
     def __init__(self,username,email,password_hash):
         self.username=username

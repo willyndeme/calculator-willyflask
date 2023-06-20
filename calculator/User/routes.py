@@ -1,4 +1,4 @@
-from flask import Blueprint,request,redirect,url_for,render_template
+from flask import Blueprint,request,redirect,url_for,render_template,flash
 from calculator.User.forms import RegistrationForm, LoginForm
 from calculator import db,bcrypt
 from flask_login import login_user,logout_user,login_required
@@ -17,6 +17,7 @@ def register():
         user=users(username=username,email=email,password_hash=password_hash)
         db.session.add(user)
         db.session.commit()
+        flash('Account created successfully',category='success')
         return redirect(url_for('math.home'))
     return render_template('register.html',form=form)
 
