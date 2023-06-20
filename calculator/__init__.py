@@ -11,21 +11,21 @@ db=SQLAlchemy()
 bcrypt=Bcrypt()
 login=LoginManager()
 
-#def create_app():
-app=Flask(__name__)
+def create_app():
+    app=Flask(__name__)
 
-app.config['SECRET_KEY']=os.environ.get('SECRET_KEY')
-app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get('SQLALCHEMY_DATABASE_URI')
-db.init_app(app)
-bcrypt.init_app(app)
-login.init_app(app)
-login.login_view='use.login'
+    app.config['SECRET_KEY']=os.environ.get('SECRET_KEY')
+    app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get('SQLALCHEMY_DATABASE_URI')
+    db.init_app(app)
+    bcrypt.init_app(app)
+    login.init_app(app)
+    login.login_view='use.login'
 
 
-from calculator.User.routes import use
-from calculator.math.routes import math
+    from calculator.User.routes import use
+    from calculator.math.routes import math
 
-app.register_blueprint(use)
-app.register_blueprint(math)
+    app.register_blueprint(use)
+    app.register_blueprint(math)
         
-#return app
+    return app
