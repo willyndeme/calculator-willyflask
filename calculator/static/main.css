@@ -1,6 +1,10 @@
+html, body {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
 .home{
     align-items: center;
-    width: 50rem;
     height:20rem;
     background-color:rgb(243, 235, 235);
     color: rgb(255, 255, 255);
@@ -26,7 +30,6 @@ a:hover{
 }
 .add,.multiply,.subtract,.divide,.register{
     align-items: center;
-    width: 50rem;
     height:20rem;
     margin: 32px auto 0 auto;
     padding:20px;
@@ -36,6 +39,4 @@ a:hover{
     text-align:center;
     margin:32px auto 0 auto;
     background-color:aqua;
-    width: 50rem;
-
 }
