@@ -15,7 +15,7 @@ login=LoginManager()
 app=Flask(__name__)
 
 app.config['SECRET_KEY']=os.environ.get('SECRET_KEY')
-app.config['SQLALCHEMY_DATABASE_URI']='postgresql://willy:VS8JGpVSdm5ukJZxH5j8cowzqOpHVwZI@dpg-ci86uq18g3nfucecagbg-a.oregon-postgres.render.com/calculatorwilly19'
+app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get('SQLALCHEMY_DATABASE_URI')
 db.init_app(app)
 bcrypt.init_app(app)
 login.init_app(app)
