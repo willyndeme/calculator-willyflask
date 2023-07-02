@@ -1,42 +1,73 @@
+*,::before,::after{
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
-  }
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
 
 .home{
+    padding: 2rem;
     align-items: center;
-    height:20rem;
-    background-color:rgb(243, 235, 235);
+    background-color:rgb(187, 233, 233);
     color: rgb(255, 255, 255);
     margin: 32px auto 0 auto;
-    border-radius: 10%;
+    padding: 2rem;
+    border-radius: 10px;
 }
 .home-item{
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    margin:0% auto;
+    margin:0 auto 2rem auto;
     padding:2em;
-
+    border-radius: 10px;
+    text-transform: capitalize;
+    box-shadow: 10px;
+    transition: transform 0.2s ease-in-out;
 }
 
-a{
+.home-item:hover{
+    text-decoration: underline;
+    color: white;
+    transform: translateY(-0.5rem);
+
+}
+.nav-link,.home-link{
     text-decoration: none;
     color:aliceblue;
     font-family: sans-serif;
     font-size: large;
+    transition: transform 0.2s ease-in-out;
 }
-a:hover{
-    background-color: aqua;
+.nav-link:hover{
+    color: rgb(255, 102, 0);
+    text-decoration:underline;
+    transform: translateY(-0.5rem);
 }
 .add,.multiply,.subtract,.divide,.register{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    height:20rem;
-    margin: 32px auto 0 auto;
+    margin: 2rem;
     padding:20px;
-    background-color:pink;
+    background-color:rgb(255, 192, 203);
+    border-radius: 20px;
 }
 .multi-item,.add-item,.div-item,.sub-item{
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
     text-align:center;
-    margin:32px auto 0 auto;
+    margin:2rem;
     background-color:aqua;
+    border-radius: 10px;
 }
